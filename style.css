@@ -1,5 +1,6 @@
-#map{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-}
+.scrolled-down{
+    transform:translateY(-100%); transition: all 0.3s ease-in-out;
+  }
+.scrolled-up{
+    transform:translateY(0); transition: all 0.3s ease-in-out;
+  }
