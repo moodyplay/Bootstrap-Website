@@ -51,4 +51,26 @@ document.addEventListener("DOMContentLoaded", function () {
             isNavbarOpen = false;
         });
     }
+    const navLinks = document.querySelectorAll('.nav-item','up');
+    navLinks.forEach((link) => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.querySelector('a').getAttribute('data-scroll-to');
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    const scrollTopButton = document.querySelector('.up');
+    scrollTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
 });
