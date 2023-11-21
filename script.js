@@ -25,14 +25,12 @@ document.addEventListener("DOMContentLoaded", function () {
                     bsCollapse.hide();
                     isNavbarOpen = false;
                 }
-
                 el_autohide.classList.remove('scrolled-up');
                 el_autohide.classList.add('scrolled-down');
             }
             last_scroll_top = scroll_top;
         });
 
-        
         window.addEventListener('touchstart', function (e) {
             
             if (isNavbarOpen && !menuToggle.contains(e.target)) {
@@ -41,12 +39,10 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        
         menuToggle.addEventListener('show.bs.collapse', function () {
             isNavbarOpen = true;
         });
 
-        
         menuToggle.addEventListener('hidden.bs.collapse', function () {
             isNavbarOpen = false;
         });
