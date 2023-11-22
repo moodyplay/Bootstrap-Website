@@ -5,7 +5,7 @@
     transform:translateY(0); transition: all 0.3s ease-in-out;
   }
 
-.up{
+#up{
   position: absolute;
   right:0;
   bottom:33%;
